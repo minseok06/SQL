@@ -1,0 +1,28 @@
+30911_양민석_0412
+
+★ concat함수 // 두 문자열을 합칠때 사용
+
+문제18> job_title열 max_salary열의 데이터를 합쳐, 'before'열로 별칭해 출력하고,
+중간에 ':'을 넣어 'alter'별칭의 열로 출력하시오.
+
+SQL> select concat(job_title, max_salary) as before,
+concat(job_title, concat(':',max_salary)) as after
+    2 from jobs;
+
+concat를 기호로 바꾸면 아래와 같다.
+concat : ||
+
+select job_title || min_salary as before, job_title || ':' || min_salary as after from jobs;
+
+★ round함수 반올림 처리 함수
+예) 1234.5678
+     -1 : 자연수 첫번째자리를 0 ---> 1230
+     -2 : 자연수 첫번째, 두번째 자리를 0 ---> 1200
+     -3 : 자연수 첫번째, 두번째, 세번째 자리를 0 ---> 1000
+      0 : 소수점 첫째자리를 반올림 --> 1235
+      1 : 소수점 둘째자리를 반올림 --> 1234.6
+      2 : 소수점 세째자리를 반올림 --> 1234.57
+      3 : 소수점 네째자리를 반올림 --> 124.568
+
+SQL> select min_salary as before, round(min_salary/3.4,2), round(min_salary/3.4,0),
+  2  round(min_salary/3.14,-2) from jobs;
