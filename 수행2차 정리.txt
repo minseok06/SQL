@@ -94,6 +94,3 @@ select * from jobs
   4  select * from jobs 
   5  where max_salary >=8000;
 
-
-
-
