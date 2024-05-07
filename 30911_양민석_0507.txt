@@ -1,0 +1,12 @@
+30911_양민석_0507
+
+☆테이블 생성하기
+SQL> create table fatboy
+  2  as select * from jobs;
+
+☆테이블에 데이터를 추가하는 insert문
+insert into fatboy(job_id, job_title, min_salary, max_salary)
+values('AD_PRES','KING',20000,400000);
+
+insert into fatboy(job_id, job_title, min_salary, max_salary)
+values('PD_PRES','QUEEN',10000,125000);
