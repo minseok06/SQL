@@ -1,0 +1,19 @@
+30911_양민석
+※ 정수 타입 NUMBER(3)
+   문자 타입 VARCHAR2(10)
+
+CREATE TABLE ABC(
+성명 varchar2(10),
+그래픽디자인 number(3),
+DBB number(3),
+프로그래밍 number(3),
+평가 varchar2(10));
+
+문제34> 테이블에 10개 이상의 데이터를 insert문을 이용해 채워넣으시오.
+평가는 공백
+insert into abc
+values('양민석',80,90,100,'우수');
+insert into abc
+values('손재영',100,90,80,'우수');
+insert into abc
+values('박세민',90,100,80,'우수');
