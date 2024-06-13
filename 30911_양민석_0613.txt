@@ -1,0 +1,29 @@
+30911_양민석_0613
+
+문제39> '부서별 성과분석표' 테이블을 생성하고
+'부서명', 'MAR', 'APR', 'MAY', '비고' 의 열을 생성
+(단 부서명과 비고는 문자형 타입선언, 나머지는 숫자형 4자리)
+※ 정수 타입 NUMBER(3)
+   문자 타입 VARCHAR2(5)
+
+create table 부서별성과분석표(
+부서명 varchar2(20),
+MAR number(3),
+APR number(3),
+MAY number(3),
+비고 varchar2(20));
+
+insert into 부서별성과분석표
+values('김준원',100,100,100,'최우수');
+insert into 부서별성과분석표
+values('유시훈',90,92,70,'우수');
+insert into 부서별성과분석표
+values('양민석',100,80,0,'보통');
+insert into 부서별성과분석표
+values('홍영준',83,95,77,'우수');
+insert into 부서별성과분석표
+values('손재영',85,98,87,'우수');
+
+
+
+
