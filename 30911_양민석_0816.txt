@@ -1,0 +1,19 @@
+<2학기 수행평가>
+
+SQL> create table 고객(
+  2     고객번호 varchar(10)  not null,
+  3     이름 varchar(10)  not null,
+  4     비밀번호 varchar(10)  not null,
+  5     primary key(고객번호));
+
+SQL> CREATE TABLE 주문 (
+  2  주문번호 varchar(10) NOT NULL,
+  3   고객번호 varchar(10) NOT NULL,
+  4   주문일 varchar(18) NOT NULL,
+  5   주문가격 decimal(15,2) NOT NULL,
+  6   결제금액 varchar(18) NOT NULL,
+  7   PRIMARY KEY (주문번호),
+  8   FOREIGN KEY (고객번호) REFERENCES 고객 (고객번호));
+
+<컬럼 사이즈 조절 방법>
+SQL> col 주문일 format a10;
