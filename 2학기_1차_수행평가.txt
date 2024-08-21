@@ -1,0 +1,43 @@
+2학기_1차_수행평가
+
+* 고객 테이블 생성
+SQL>  create table 고객(
+  2     고객번호 varchar(30)  not null,
+  3     이름 varchar(10)  not null,
+  4     비밀번호 varchar(10)  not null,
+  5     primary key(고객번호));
+
+* 고객 데이터 입력
+SQL> INSERT INTO 고객 VALUES ('C07', '홍만호', '1234');
+
+* 주문 테이블 생성
+SQL>  CREATE TABLE 주문 (
+  2  주문번호 varchar(10) NOT NULL,
+  3   고객번호 varchar(10) NOT NULL,
+  4   주문일 varchar(18) NOT NULL,
+  5   주문가격 varchar(18) NOT NULL,
+  6   결제금액 varchar(18) NOT NULL,
+  7   PRIMARY KEY (주문번호),
+  8   FOREIGN KEY (고객번호) REFERENCES 고객 (고객번호));
+
+* 주문 데이터 입력
+SQL> INSERT INTO 주문 VALUES  ('O103', 'C04', '1207', 1000, 1000);
+
+* 고객 데이터 출력 방법
+SQL> select * from 고객;
+
+* 주문 데이터 출력 방법
+SQL> select * from 주문;
+
+* 테이블 열 너비 바꾸는 방법
+SQL> col 주문 format a10;
+SQL> column 주문 format a10;
+
+* 열의 자료형을 변경하는 방법
+SQL> alter table 주문
+  2   modify 주문가격 number(10);
+
+* 테이블 삭제 방법
+SQL> drop table 고객;
+SQL> drop table 주문;
+
